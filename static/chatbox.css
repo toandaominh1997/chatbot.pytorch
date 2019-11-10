@@ -1,11 +1,34 @@
 body,html{
     height: 100%;
     margin: 0;
-    background: #7F7FD5;
-   background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+    background: rgb(255, 255, 255);
+    background: -webkit-linear-gradient(to right, rgb(213, 221, 220), #86A8E7, #7F7FD5);
     background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+} 
+.msg_card_body{
+    overflow: scroll;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+/* Track */
+::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey; 
+border-radius: 10px;
 }
 
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: rgb(218, 208, 208); 
+border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #b30000; 
+}
 .chat{
     margin-top: auto;
     margin-bottom: auto;
@@ -20,9 +43,7 @@ body,html{
     overflow-y: auto;
     white-space: nowrap;
 }
-.msg_card_body{
-    overflow-y: auto;
-}
+
 .card-header{
     border-radius: 15px 15px 0 0 !important;
     border-bottom: 0 !important;
@@ -48,7 +69,7 @@ border-radius: 0 0 15px 15px !important;
     background-color: rgba(0,0,0,0.3) !important;
     border:0 !important;
     color:white !important;
-    height: 60px !important;
+    height: 40px !important;
     overflow-y: auto;
 }
     .type_msg:focus{

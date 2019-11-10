@@ -5,6 +5,7 @@ from inferent import encoder, decoder, voc, searcher, normalizeString, evaluate
 
 
 def predict(input_sentence):
+    # return "hello"
     try:
         input_sentence = normalizeString(input_sentence)
         output_words = evaluate(encoder, decoder, searcher, voc, input_sentence)
@@ -27,6 +28,7 @@ def messageReceived(methods=['GET', 'POST']):
 
 @socketio.on('my event')
 def handle_my_custom_event(json, methods=['GET', 'POST']):
+    print('Vo day ne')
     socketio.emit('my response', json, callback=messageReceived)
     bot_json = {'user_name': 'toandaominh1997_bot', 'message': predict(json['message'])}
     socketio.emit('my response', bot_json, callback=messageReceived)
