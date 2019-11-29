@@ -11,7 +11,7 @@ encoder_n_layers = 2
 decoder_n_layers = 2
 dropout = 0.1
 batch_size = 64
-loadFilename = '/home/bigkizd/code/chatbot.pytorch/weights/15000_checkpoint.tar'
+loadFilename = './15000_checkpoint.tar'
 
 if loadFilename:
     print("Loading checkpoint: {} ...".format(loadFilename))
